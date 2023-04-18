@@ -73,9 +73,9 @@ Widget homeTabBuilder() {
                               padding: EdgeInsets.symmetric(vertical: 30),
                             ),
                             CircleAvatar(
-                              radius: 150,
+                              radius: 200,
                               backgroundImage: AssetImage(
-                                tabs_data.pathToProfilePic,
+                                tabs_data.pathToProfilePic1,
                               ),
                             )
                           ],

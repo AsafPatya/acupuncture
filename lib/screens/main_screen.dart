@@ -4,6 +4,8 @@ import 'dart:io';
 import '../data/main_screen_data.dart' as main_screen_data;
 import '../data/global_data.dart' as global_data;
 import 'tab_screens/home_tab.dart'as home_tab;
+import 'tab_screens/recommendations_tab.dart' as recommendations_tab;
+import 'tab_screens/contact_tab.dart' as contact_tab;
 
 class MainScreen extends StatefulWidget {
   const MainScreen({Key? key}) : super(key: key);
@@ -95,7 +97,19 @@ class _MainScreenState extends State<MainScreen> with TickerProviderStateMixin {
         ),
       ),
       backgroundColor: main_screen_data.appBarBackground,
-      body: home_tab.homeTabBuilder(),
+      body: IndexedStack(
+        index: _tabController.index,
+        children: [
+          // Contact Screen
+          contact_tab.homeTabBuilder(),
+
+          // Recommendations Screen
+          recommendations_tab.homeTabBuilder(),
+
+          // Home Screen
+          home_tab.homeTabBuilder(),
+      ]
+      )
     );
   }
 }
