@@ -104,7 +104,7 @@ class _MainScreenState extends State<MainScreen> with TickerProviderStateMixin {
           contact_tab.homeTabBuilder(),
 
           // Recommendations Screen
-          recommendations_tab.homeTabBuilder(),
+          recommendations_tab.recommendationsTabBuilder(),
 
           // Home Screen
           home_tab.homeTabBuilder(),
