@@ -12,12 +12,15 @@ Widget recommendationsTabBuilder(){
     builder: (BuildContext context, BoxConstraints constraints) {
       return SingleChildScrollView(
           child: Container(
-            color: global_data.secondColor,
+            color: global_data.appBarBackground,
             child:  Row(
               crossAxisAlignment: CrossAxisAlignment.start,
-
               children: [
                 Expanded(
+                    flex: 1,
+                    child: Padding(padding: EdgeInsets.symmetric(vertical: 10),)),
+                Expanded(
+                  flex: 15,
                   child:
                     Column(
                       children: [
@@ -28,6 +31,7 @@ Widget recommendationsTabBuilder(){
                             fit: BoxFit.fitWidth,
                           ),
                         ),
+                        Padding(padding: EdgeInsets.symmetric(vertical: 20)),
                         SizedBox(
                           width: MediaQuery.of(context).size.width / 3.0,
                           child: Image.asset(
@@ -35,6 +39,7 @@ Widget recommendationsTabBuilder(){
                             fit: BoxFit.fitWidth,
                           ),
                         ),
+                        Padding(padding: EdgeInsets.symmetric(vertical: 20)),
                         SizedBox(
                           width: MediaQuery.of(context).size.width / 3.0,
                           child: Image.asset(
@@ -42,6 +47,7 @@ Widget recommendationsTabBuilder(){
                             fit: BoxFit.fitWidth,
                           ),
                         ),
+                        Padding(padding: EdgeInsets.symmetric(vertical: 20)),
                         SizedBox(
                           width: MediaQuery.of(context).size.width / 3.0,
                           child: Image.asset(
@@ -49,6 +55,7 @@ Widget recommendationsTabBuilder(){
                             fit: BoxFit.fitWidth,
                           ),
                         ),
+                        Padding(padding: EdgeInsets.symmetric(vertical: 20)),
                         SizedBox(
                           width: MediaQuery.of(context).size.width / 3.0,
                           child: Image.asset(
@@ -56,6 +63,7 @@ Widget recommendationsTabBuilder(){
                             fit: BoxFit.fitWidth,
                           ),
                         ),
+                        Padding(padding: EdgeInsets.symmetric(vertical: 20)),
                         SizedBox(
                           width: MediaQuery.of(context).size.width / 3.0,
                           child: Image.asset(
@@ -63,6 +71,7 @@ Widget recommendationsTabBuilder(){
                             fit: BoxFit.fitWidth,
                           ),
                         ),
+                        Padding(padding: EdgeInsets.symmetric(vertical: 20)),
                         SizedBox(
                           width: MediaQuery.of(context).size.width / 3.0,
                           child: Image.asset(
@@ -75,6 +84,10 @@ Widget recommendationsTabBuilder(){
                     )
                 ),
                 Expanded(
+                  flex: 1,
+                    child: Padding(padding: EdgeInsets.symmetric(vertical: 10),)),
+                Expanded(
+                  flex: 15,
                   child: Column(
                     children: [
                       SizedBox(
@@ -84,6 +97,7 @@ Widget recommendationsTabBuilder(){
                           fit: BoxFit.fitWidth,
                         ),
                       ),
+                      Padding(padding: EdgeInsets.symmetric(vertical: 20)),
                       SizedBox(
                         width: MediaQuery.of(context).size.width / 3.0,
                         child: Image.asset(
@@ -91,6 +105,7 @@ Widget recommendationsTabBuilder(){
                           fit: BoxFit.fitWidth,
                         ),
                       ),
+                      Padding(padding: EdgeInsets.symmetric(vertical: 20)),
                       SizedBox(
                         width: MediaQuery.of(context).size.width / 3.0,
                         child: Image.asset(
@@ -98,6 +113,7 @@ Widget recommendationsTabBuilder(){
                           fit: BoxFit.fitWidth,
                         ),
                       ),
+                      Padding(padding: EdgeInsets.symmetric(vertical: 20)),
                       SizedBox(
                         width: MediaQuery.of(context).size.width / 3.0,
                         child: Image.asset(
@@ -105,6 +121,7 @@ Widget recommendationsTabBuilder(){
                           fit: BoxFit.fitWidth,
                         ),
                       ),
+                      Padding(padding: EdgeInsets.symmetric(vertical: 20)),
                       SizedBox(
                         width: MediaQuery.of(context).size.width / 3.0,
                         child: Image.asset(
@@ -112,6 +129,7 @@ Widget recommendationsTabBuilder(){
                           fit: BoxFit.fitWidth,
                         ),
                       ),
+                      Padding(padding: EdgeInsets.symmetric(vertical: 20)),
                       SizedBox(
                         width: MediaQuery.of(context).size.width / 3.0,
                         child: Image.asset(
@@ -119,17 +137,14 @@ Widget recommendationsTabBuilder(){
                           fit: BoxFit.fitWidth,
                         ),
                       ),
-                      SizedBox(
-                        width: MediaQuery.of(context).size.width / 3.0,
-                        child: Image.asset(
-                          tabs_data.pathToRec14,
-                          fit: BoxFit.fitWidth,
-                        ),
-                      ),
                     ],
                   ),
                 ),
                 Expanded(
+                    flex: 1,
+                    child: Padding(padding: EdgeInsets.symmetric(vertical: 10),)),
+                Expanded(
+                  flex: 15,
                   child:
                     Column(
                       children: [
@@ -140,6 +155,7 @@ Widget recommendationsTabBuilder(){
                             fit: BoxFit.fitWidth,
                           ),
                         ),
+                        Padding(padding: EdgeInsets.symmetric(vertical: 20)),
                         SizedBox(
                           width: MediaQuery.of(context).size.width / 3.0,
                           child: Image.asset(
@@ -147,6 +163,7 @@ Widget recommendationsTabBuilder(){
                             fit: BoxFit.fitWidth,
                           ),
                         ),
+                        Padding(padding: EdgeInsets.symmetric(vertical: 20)),
                         SizedBox(
                           width: MediaQuery.of(context).size.width / 3.0,
                           child: Image.asset(
@@ -154,6 +171,7 @@ Widget recommendationsTabBuilder(){
                             fit: BoxFit.fitWidth,
                           ),
                         ),
+                        Padding(padding: EdgeInsets.symmetric(vertical: 20)),
                         SizedBox(
                           width: MediaQuery.of(context).size.width / 3.0,
                           child: Image.asset(
@@ -161,6 +179,7 @@ Widget recommendationsTabBuilder(){
                             fit: BoxFit.fitWidth,
                           ),
                         ),
+                        Padding(padding: EdgeInsets.symmetric(vertical: 20)),
                         SizedBox(
                           width: MediaQuery.of(context).size.width / 3.0,
                           child: Image.asset(
@@ -168,16 +187,29 @@ Widget recommendationsTabBuilder(){
                             fit: BoxFit.fitWidth,
                           ),
                         ),
+                        Padding(padding: EdgeInsets.symmetric(vertical: 20)),
                         SizedBox(
                           width: MediaQuery.of(context).size.width / 3.0,
                           child: Image.asset(
                             tabs_data.pathToRec20,
                             fit: BoxFit.fitWidth,
                           ),
-                        )
+                        ),
+                        Padding(padding: EdgeInsets.symmetric(vertical: 20)),
+                        SizedBox(
+                          width: MediaQuery.of(context).size.width / 3.0,
+                          child: Image.asset(
+                            tabs_data.pathToRec14,
+                            fit: BoxFit.fitWidth,
+                          ),
+                        ),
                       ],
                     )
                 ),
+                Expanded(
+                    flex: 1,
+                    child: Padding(padding: EdgeInsets.symmetric(vertical: 10),)),
+
               ],
             ),
           )
