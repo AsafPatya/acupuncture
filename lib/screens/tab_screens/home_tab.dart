@@ -13,36 +13,6 @@ Widget homeTabBuilder() {
       return SingleChildScrollView(
         child: Column(
           children: [
-            Stack(
-              children: [
-                SizedBox(
-                  height: 810,
-                  child: Align(
-                    alignment: Alignment.bottomCenter,
-                    child: ClipRect(
-                      clipBehavior: Clip.antiAlias,
-                      child: Image.asset(
-                        tabs_data.pathToFirstPic,
-                        width: constraints.maxWidth,
-                        fit: BoxFit.cover,
-                      ),
-                    ),
-                  ),
-                ),
-                Center(
-                  child: Padding(
-                    padding: EdgeInsets.only(top: tabs_data.textOnPicPaddingTop),
-                    child: Text(tabs_data.textOnPic,
-                      style: TextStyle(
-                        color: global_data.secondColor,
-                        fontSize: tabs_data.texOnPicFontSize,
-                        fontWeight: tabs_data.textOnPicFontWeight,
-                      ),
-                    ),
-                  ),
-                ),
-              ],
-            ),
             Container(
               color: Colors.white,
               child:Padding(

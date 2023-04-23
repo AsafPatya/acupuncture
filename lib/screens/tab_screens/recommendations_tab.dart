@@ -27,7 +27,7 @@ Widget recommendationsTabBuilder(){
                         SizedBox(
                           width: MediaQuery.of(context).size.width / 3.0,
                           child: Image.asset(
-                            tabs_data.pathToRec1,
+                            tabs_data.pathToWhatsUpRec[tabs_data.Index.first.index],
                             fit: BoxFit.fitWidth,
                           ),
                         ),
@@ -35,7 +35,7 @@ Widget recommendationsTabBuilder(){
                         SizedBox(
                           width: MediaQuery.of(context).size.width / 3.0,
                           child: Image.asset(
-                            tabs_data.pathToRec2,
+                            tabs_data.pathToWhatsUpRec[tabs_data.Index.second.index],
                             fit: BoxFit.fitWidth,
                           ),
                         ),
@@ -43,7 +43,7 @@ Widget recommendationsTabBuilder(){
                         SizedBox(
                           width: MediaQuery.of(context).size.width / 3.0,
                           child: Image.asset(
-                            tabs_data.pathToRec3,
+                            tabs_data.pathToWhatsUpRec[tabs_data.Index.third.index],
                             fit: BoxFit.fitWidth,
                           ),
                         ),
@@ -51,7 +51,7 @@ Widget recommendationsTabBuilder(){
                         SizedBox(
                           width: MediaQuery.of(context).size.width / 3.0,
                           child: Image.asset(
-                            tabs_data.pathToRec4,
+                            tabs_data.pathToWhatsUpRec[tabs_data.Index.fourth.index],
                             fit: BoxFit.fitWidth,
                           ),
                         ),
@@ -59,7 +59,7 @@ Widget recommendationsTabBuilder(){
                         SizedBox(
                           width: MediaQuery.of(context).size.width / 3.0,
                           child: Image.asset(
-                            tabs_data.pathToRec5,
+                            tabs_data.pathToWhatsUpRec[tabs_data.Index.fifth.index],
                             fit: BoxFit.fitWidth,
                           ),
                         ),
@@ -67,7 +67,7 @@ Widget recommendationsTabBuilder(){
                         SizedBox(
                           width: MediaQuery.of(context).size.width / 3.0,
                           child: Image.asset(
-                            tabs_data.pathToRec6,
+                            tabs_data.pathToWhatsUpRec[tabs_data.Index.sixth.index],
                             fit: BoxFit.fitWidth,
                           ),
                         ),
@@ -75,7 +75,7 @@ Widget recommendationsTabBuilder(){
                         SizedBox(
                           width: MediaQuery.of(context).size.width / 3.0,
                           child: Image.asset(
-                            tabs_data.pathToRec7,
+                            tabs_data.pathToWhatsUpRec[tabs_data.Index.seventh.index],
                             fit: BoxFit.fitWidth,
                           ),
                         )
@@ -93,7 +93,7 @@ Widget recommendationsTabBuilder(){
                       SizedBox(
                         width: MediaQuery.of(context).size.width / 3.0,
                         child: Image.asset(
-                          tabs_data.pathToRec8,
+                          tabs_data.pathToFacebookRec[tabs_data.Index.first.index],
                           fit: BoxFit.fitWidth,
                         ),
                       ),
@@ -101,7 +101,7 @@ Widget recommendationsTabBuilder(){
                       SizedBox(
                         width: MediaQuery.of(context).size.width / 3.0,
                         child: Image.asset(
-                          tabs_data.pathToRec9,
+                          tabs_data.pathToFacebookRec[tabs_data.Index.second.index],
                           fit: BoxFit.fitWidth,
                         ),
                       ),
@@ -109,7 +109,7 @@ Widget recommendationsTabBuilder(){
                       SizedBox(
                         width: MediaQuery.of(context).size.width / 3.0,
                         child: Image.asset(
-                          tabs_data.pathToRec10,
+                          tabs_data.pathToFacebookRec[tabs_data.Index.third.index],
                           fit: BoxFit.fitWidth,
                         ),
                       ),
@@ -117,7 +117,7 @@ Widget recommendationsTabBuilder(){
                       SizedBox(
                         width: MediaQuery.of(context).size.width / 3.0,
                         child: Image.asset(
-                          tabs_data.pathToRec11,
+                          tabs_data.pathToFacebookRec[tabs_data.Index.fourth.index],
                           fit: BoxFit.fitWidth,
                         ),
                       ),
@@ -125,7 +125,7 @@ Widget recommendationsTabBuilder(){
                       SizedBox(
                         width: MediaQuery.of(context).size.width / 3.0,
                         child: Image.asset(
-                          tabs_data.pathToRec12,
+                          tabs_data.pathToFacebookRec[tabs_data.Index.fifth.index],
                           fit: BoxFit.fitWidth,
                         ),
                       ),
@@ -133,7 +133,7 @@ Widget recommendationsTabBuilder(){
                       SizedBox(
                         width: MediaQuery.of(context).size.width / 3.0,
                         child: Image.asset(
-                          tabs_data.pathToRec13,
+                          tabs_data.pathToFacebookRec[tabs_data.Index.sixth.index],
                           fit: BoxFit.fitWidth,
                         ),
                       ),
@@ -151,7 +151,7 @@ Widget recommendationsTabBuilder(){
                         SizedBox(
                           width: MediaQuery.of(context).size.width / 3.0,
                           child: Image.asset(
-                            tabs_data.pathToRec15,
+                            tabs_data.pathToFacebookRec[tabs_data.Index.seventh.index],
                             fit: BoxFit.fitWidth,
                           ),
                         ),
@@ -159,7 +159,7 @@ Widget recommendationsTabBuilder(){
                         SizedBox(
                           width: MediaQuery.of(context).size.width / 3.0,
                           child: Image.asset(
-                            tabs_data.pathToRec16,
+                            tabs_data.pathToFacebookRec[tabs_data.Index.eighth.index],
                             fit: BoxFit.fitWidth,
                           ),
                         ),
@@ -167,7 +167,7 @@ Widget recommendationsTabBuilder(){
                         SizedBox(
                           width: MediaQuery.of(context).size.width / 3.0,
                           child: Image.asset(
-                            tabs_data.pathToRec17,
+                            tabs_data.pathToFacebookRec[tabs_data.Index.ninth.index],
                             fit: BoxFit.fitWidth,
                           ),
                         ),
@@ -175,7 +175,7 @@ Widget recommendationsTabBuilder(){
                         SizedBox(
                           width: MediaQuery.of(context).size.width / 3.0,
                           child: Image.asset(
-                            tabs_data.pathToRec18,
+                            tabs_data.pathToFacebookRec[tabs_data.Index.tenth.index],
                             fit: BoxFit.fitWidth,
                           ),
                         ),
@@ -183,7 +183,7 @@ Widget recommendationsTabBuilder(){
                         SizedBox(
                           width: MediaQuery.of(context).size.width / 3.0,
                           child: Image.asset(
-                            tabs_data.pathToRec19,
+                            tabs_data.pathToFacebookRec[tabs_data.Index.eleventh.index],
                             fit: BoxFit.fitWidth,
                           ),
                         ),
@@ -191,7 +191,7 @@ Widget recommendationsTabBuilder(){
                         SizedBox(
                           width: MediaQuery.of(context).size.width / 3.0,
                           child: Image.asset(
-                            tabs_data.pathToRec20,
+                            tabs_data.pathToUndefined[tabs_data.Index.first.index],
                             fit: BoxFit.fitWidth,
                           ),
                         ),
@@ -199,7 +199,7 @@ Widget recommendationsTabBuilder(){
                         SizedBox(
                           width: MediaQuery.of(context).size.width / 3.0,
                           child: Image.asset(
-                            tabs_data.pathToRec14,
+                            tabs_data.pathToUndefined[tabs_data.Index.second.index],
                             fit: BoxFit.fitWidth,
                           ),
                         ),
@@ -209,7 +209,6 @@ Widget recommendationsTabBuilder(){
                 Expanded(
                     flex: 1,
                     child: Padding(padding: EdgeInsets.symmetric(vertical: 10),)),
-
               ],
             ),
           )
