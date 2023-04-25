@@ -101,7 +101,7 @@ class _MainScreenState extends State<MainScreen> with TickerProviderStateMixin {
         index: _tabController.index,
         children: [
           // Contact Screen
-          contact_tab.homeTabBuilder(),
+          contact_tab.ContactTab(),
 
           // Recommendations Screen
           recommendations_tab.recommendationsTabBuilder(),

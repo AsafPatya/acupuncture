@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'dart:io';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
+import 'package:email_validator/email_validator.dart';
 
 import '../../data/main_screen_data.dart' as main_screen_data;
 import '../../data/global_data.dart' as global_data;
