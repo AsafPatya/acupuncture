@@ -7,7 +7,7 @@ import 'package:email_validator/email_validator.dart';
 import 'package:http/http.dart' as http;
 
 import '../../data/main_screen_data.dart' as main_screen_data;
-import '../../data/global_data.dart' as global_data;
+import '../../data/global_data.dart' as g_d;
 import '../../data/tabs_data/contact_tab_data.dart' as c_t_d;
 
 class ContactTab extends StatelessWidget {
@@ -16,35 +16,38 @@ class ContactTab extends StatelessWidget {
   final _formKey = GlobalKey<FormState>();
   final nameController = TextEditingController();
   final emailController = TextEditingController();
+  final phoneController = TextEditingController();
   final messageController = TextEditingController();
+
+  Future sendEmail(String name, String email, String phone, String message) async {
+    final url = Uri.parse('https://api.emailjs.com/api/v1.0/email/send');
+    const serviceId = c_t_d.serviceId;
+    const templateId = c_t_d.templateId;
+    const userId = c_t_d.userId;
+    final response = await http.post(url,
+        headers: {'Content-Type': 'application/json'},//This line makes sure it works for all platforms.
+        body: json.encode({
+          'service_id': serviceId,
+          'template_id': templateId,
+          'user_id': userId,
+          'template_params': {
+            'from_name': name,
+            'from_email': email,
+            'phone': phone,
+            'message': message
+          }
+        }));
+    return response.statusCode;
+  }
 
   @override
   Widget build(BuildContext context) {
-    Future sendEmail(String name, String email, String message) async {
-      final url = Uri.parse('https://api.emailjs.com/api/v1.0/email/send');
-      const serviceId = c_t_d.serviceId;
-      const templateId = c_t_d.templateId;
-      const userId = c_t_d.userId;
-      final response = await http.post(url,
-          headers: {'Content-Type': 'application/json'},//This line makes sure it works for all platforms.
-          body: json.encode({
-            'service_id': serviceId,
-            'template_id': templateId,
-            'user_id': userId,
-            'template_params': {
-              'from_name': name,
-              'from_email': email,
-              'message': message
-            }
-          }));
-      return response.statusCode;
-    }
     return Scaffold(
-      backgroundColor: const Color(0xfff5f5fd),
+      backgroundColor: g_d.tabsBackgroundColor,
       body: Center(
         child: Container(
-          height: 450,
-          width: 400,
+          height: MediaQuery.of(context).size.height / 2.0 ,
+          width: MediaQuery.of(context).size.width / 2.5,
           margin: const EdgeInsets.symmetric(
             horizontal: 40,
             vertical: 20,
@@ -68,38 +71,68 @@ class ContactTab extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                const Text('Contact Us',
-                    style:
-                    TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
+                const Text(c_t_d.formHeader,
+                  style: TextStyle(
+                      fontSize: c_t_d.headerFontSize,
+                      fontWeight: FontWeight.bold
+                  ),
+                  textDirection: TextDirection.rtl,
+                ),
                 TextFormField(
                   controller: nameController,
-                  decoration: const InputDecoration(hintText: 'Name'),
+                  decoration: const InputDecoration(
+                    hintText: c_t_d.fullNameTextHint,
+                    alignLabelWithHint: true,
+                  ),
+                  textAlign: TextAlign.right,
                   validator: (value) {
                     if (value == null || value.isEmpty) {
-                      return '*Required';
+                      return c_t_d.requiredText;
                     }
                     return null;
                   },
                 ),
                 TextFormField(
                   controller: emailController,
-                  decoration: const InputDecoration(hintText: 'Email'),
+                  decoration: const InputDecoration(
+                    hintText: c_t_d.emailTextHint,
+                    alignLabelWithHint: true,
+                  ),
+                  textAlign: TextAlign.right,
                   validator: (email) {
                     if (email == null || email.isEmpty) {
-                      return 'Required*';
+                      return c_t_d.requiredText;
                     } else if (!EmailValidator.validate(email)) {
-                      return 'Please enter a valid Email';
+                      return c_t_d.PleaseEnterValidEmail;
+                    }
+                    return null;
+                  },
+                ),
+                TextFormField(
+                  controller: phoneController,
+                  decoration: const InputDecoration(
+                    hintText: c_t_d.phoneNumberTextHint,
+                    alignLabelWithHint: true,
+                  ),
+                  textAlign: TextAlign.right,
+                  validator: (value) {
+                    if (value == null || value.isEmpty) {
+                      return c_t_d.requiredText;
                     }
                     return null;
                   },
                 ),
                 TextFormField(
                   controller: messageController,
-                  decoration: const InputDecoration(hintText: 'Message'),
-                  maxLines: 5,
+                  decoration: const InputDecoration(
+                    hintText: c_t_d.messageTextHint,
+                    alignLabelWithHint: true,
+                  ),
+                  textAlign: TextAlign.right,
+                  maxLines: 2,
                   validator: (value) {
                     if (value == null || value.isEmpty) {
-                      return '*Required';
+                      return c_t_d.requiredText;
                     }
                     return null;
                   },
@@ -118,6 +151,7 @@ class ContactTab extends StatelessWidget {
                         final response = await sendEmail(
                             nameController.value.text,
                             emailController.value.text,
+                            phoneController.value.text,
                             messageController.value.text);
                         ScaffoldMessenger.of(context).showSnackBar(
                           response == 200
@@ -130,10 +164,13 @@ class ContactTab extends StatelessWidget {
                         );
                         nameController.clear();
                         emailController.clear();
+                        phoneController.clear();
                         messageController.clear();
                       }
                     },
-                    child: const Text('Send', style: TextStyle(fontSize: 16)),
+                    child: const Text(c_t_d.sendButtonText,
+                        style: TextStyle(fontSize: c_t_d.sendButtonFontSize)
+                    ),
                   ),
                 ),
               ],
