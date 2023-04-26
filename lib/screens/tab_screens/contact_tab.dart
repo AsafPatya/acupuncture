@@ -69,9 +69,8 @@ class ContactTab extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: g_d.tabsBackgroundColor,
-      body: Column(
+    return SingleChildScrollView(
+      child: Column(
         children: [
           Row(
             textDirection: TextDirection.rtl,

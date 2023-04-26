@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'dart:io';
 
 import '../data/main_screen_data.dart' as main_screen_data;
-import '../data/global_data.dart' as global_data;
+import '../data/global_data.dart' as g_d;
 import 'tab_screens/home_tab.dart'as home_tab;
 import 'tab_screens/recommendations_tab.dart' as recommendations_tab;
 import 'tab_screens/contact_tab.dart' as contact_tab;
@@ -38,7 +38,7 @@ class _MainScreenState extends State<MainScreen> with TickerProviderStateMixin {
                   controller: _tabController,
                   indicator: BoxDecoration(
                     border: Border(
-                      bottom: BorderSide(color: global_data.noAffectColor)
+                      bottom: BorderSide(color: g_d.noAffectColor)
                     ),
                   ),
                   tabs: [
@@ -47,7 +47,7 @@ class _MainScreenState extends State<MainScreen> with TickerProviderStateMixin {
                         main_screen_data.contactTitleTab,
                         style: TextStyle(
                           fontSize: main_screen_data.appTitleFontSize,
-                          color: _tabController.index == main_screen_data.contactTabIndex ? global_data.primaryColor : main_screen_data.notSelectedTab
+                          color: _tabController.index == main_screen_data.contactTabIndex ? g_d.primaryColor : main_screen_data.notSelectedTab
                         ),
                       ),
                     ),
@@ -56,7 +56,7 @@ class _MainScreenState extends State<MainScreen> with TickerProviderStateMixin {
                         main_screen_data.recommendationsTitleTab,
                         style: TextStyle(
                           fontSize: main_screen_data.appTitleFontSize,
-                          color: _tabController.index == main_screen_data.recommendationsTabIndex ? global_data.primaryColor : main_screen_data.notSelectedTab,
+                          color: _tabController.index == main_screen_data.recommendationsTabIndex ? g_d.primaryColor : main_screen_data.notSelectedTab,
                         ),
                       ),
                     ),
@@ -65,7 +65,7 @@ class _MainScreenState extends State<MainScreen> with TickerProviderStateMixin {
                         main_screen_data.homeTitleTab,
                         style: TextStyle(
                           fontSize: main_screen_data.appTitleFontSize,
-                          color: _tabController.index == main_screen_data.homeTabIndex ? global_data.primaryColor : main_screen_data.notSelectedTab,
+                          color: _tabController.index == main_screen_data.homeTabIndex ? g_d.primaryColor : main_screen_data.notSelectedTab,
                         ),
                       ),
                     ),
@@ -82,13 +82,13 @@ class _MainScreenState extends State<MainScreen> with TickerProviderStateMixin {
               children: const [
                 Text(main_screen_data.appTitle,
                   style: TextStyle(fontSize: main_screen_data.appTitleFontSize,
-                    color: global_data.primaryColor,
+                    color: g_d.primaryColor,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
                 Text(main_screen_data.acupuncture,
                   style: TextStyle(fontSize: main_screen_data.acupunctureFontSize,
-                    color: global_data.primaryColor,
+                    color: g_d.primaryColor,
                   ),
                 ),
               ],
@@ -96,7 +96,7 @@ class _MainScreenState extends State<MainScreen> with TickerProviderStateMixin {
           ],
         ),
       ),
-      backgroundColor: main_screen_data.appBarBackground,
+      backgroundColor: g_d.tabsBackgroundColor,
       body: IndexedStack(
         index: _tabController.index,
         children: [

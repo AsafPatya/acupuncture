@@ -3,19 +3,17 @@ import 'dart:io';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../../data/main_screen_data.dart' as main_screen_data;
-import '../../data/global_data.dart' as global_data;
-import '../../data/tabs_data.dart' as tabs_data;
+import '../../data/global_data.dart' as g_d;
+import '../../data/tabs_data/home_tab_data.dart' as h_t_d;
 
 
 Widget homeTabBuilder() {
   return LayoutBuilder(
     builder: (BuildContext context, BoxConstraints constraints) {
       return SingleChildScrollView(
-        child: Column(
-          children: [
-            Container(
-              color: Colors.white,
-              child:Padding(
+          child: Column(
+            children: [
+              Padding(
                 padding:EdgeInsets.symmetric(vertical: 100),
                 child: Row(
                   children: [
@@ -23,7 +21,7 @@ Widget homeTabBuilder() {
                         flex: 3,
                         child: Column(
                           children: [
-                            Text(tabs_data.textAboutAcupuncture,
+                            Text(h_t_d.textAboutAcupuncture,
                               textDirection: TextDirection.rtl,
                               style: TextStyle(fontSize: 20),
                             )
@@ -34,7 +32,7 @@ Widget homeTabBuilder() {
                         flex: 2,
                         child: Column(
                           children: [
-                            Text(tabs_data.textAboveProfilePic,
+                            Text(h_t_d.textAboveProfilePic,
                               textDirection: TextDirection.rtl,
                               textAlign: TextAlign.center,
                               style: TextStyle(fontSize: 20),
@@ -45,7 +43,7 @@ Widget homeTabBuilder() {
                             CircleAvatar(
                               radius: 200,
                               backgroundImage: AssetImage(
-                                tabs_data.pathToProfilePic1,
+                                h_t_d.pathToProfilePic1,
                               ),
                             )
                           ],
@@ -53,10 +51,9 @@ Widget homeTabBuilder() {
                     )
                   ],
                 ),
-              ),
-            ),
-          ],
-        )
+              )
+            ],
+          )
       );
     },
   );
