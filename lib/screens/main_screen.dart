@@ -28,7 +28,7 @@ class _MainScreenState extends State<MainScreen> with TickerProviderStateMixin {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: main_screen_data.appBarBackground,
+        backgroundColor: Colors.white,
         title:
         Row(
           mainAxisAlignment: MainAxisAlignment.end,

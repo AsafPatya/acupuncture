@@ -15,6 +15,10 @@ const String requiredText = '*Required';
 const String PleaseEnterValidEmail = 'Please enter a valid Email';
 const String sendButtonText = 'שליחה';
 
+// facebook section
+const String facebookHeader = 'מוזמנים לעקוב אחריי בדף הפייסבוק שלי:';
+const String facebookPicPath = 'pictures/linkToFacebookPic.png';
+
 //style
 const double headerFontSize = 20;
 const double titleFontSize = 18;
